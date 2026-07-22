@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+	--color-surface: var(--raw-surface);
+	--color-surface-dim: var(--raw-surface-dim);
+	--color-surface-bright: var(--raw-surface-bright);
+	--color-surface-container-lowest: var(--raw-surface-container-lowest);
+	--color-surface-container-low: var(--raw-surface-container-low);
+	--color-surface-container: var(--raw-surface-container);
+	--color-surface-container-high: var(--raw-surface-container-high);
+	--color-surface-container-highest: var(--raw-surface-container-highest);
+	--color-on-surface: var(--raw-on-surface);
+	--color-on-surface-variant: var(--raw-on-surface-variant);
+	--color-outline: var(--raw-outline);
+	--color-outline-variant: var(--raw-outline-variant);
+
+	--color-primary: var(--raw-primary);
+	--color-on-primary: var(--raw-on-primary);
+	--color-primary-container: var(--raw-primary-container);
+	--color-on-primary-container: var(--raw-on-primary-container);
+
+	--color-secondary: var(--raw-secondary);
+	--color-on-secondary: var(--raw-on-secondary);
+	--color-secondary-container: var(--raw-secondary-container);
+	--color-on-secondary-container: var(--raw-on-secondary-container);
+
+	--color-tertiary: var(--raw-tertiary);
+	--color-on-tertiary: var(--raw-on-tertiary);
+	--color-tertiary-container: var(--raw-tertiary-container);
+	--color-on-tertiary-container: var(--raw-on-tertiary-container);
+
+	--color-error: var(--raw-error);
+	--color-on-error: var(--raw-on-error);
+	--color-error-container: var(--raw-error-container);
+	--color-on-error-container: var(--raw-on-error-container);
+
+	--color-background: var(--raw-background);
+	--color-on-background: var(--raw-on-background);
+
+	/* Tipografía: cambia de familia entera según el tema */
+	--font-display: var(--raw-font-display);
+	--font-body: var(--raw-font-body);
+	--font-mono: var(--raw-font-mono);
+  --text-hero-mobile: var(--raw-text-hero-mobile);
+	--text-hero-desktop: var(--raw-text-hero-desktop);
+
+	/* Radios: "Cyber-Organic" (chico, técnico) vs "Rounded" (grande, cálido) */
+	--radius-token-sm: var(--raw-radius-sm);
+	--radius-token-md: var(--raw-radius-md);
+	--radius-token-lg: var(--raw-radius-lg);
+	--radius-token-xl: var(--raw-radius-xl);
+
+	--container-max: 1280px;
+}
+
+/* =========================================================================
+   Emerald Night — tema oscuro, default
+   ========================================================================= */
+:root,
+[data-theme="esmerald"] {
+	--raw-surface: #101413;
+	--raw-surface-dim: #101413;
+	--raw-surface-bright: #353a39;
+	--raw-surface-container-lowest: #0a0f0e;
+	--raw-surface-container-low: #181d1b;
+	--raw-surface-container: #1c211f;
+	--raw-surface-container-high: #262b2a;
+	--raw-surface-container-highest: #313634;
+	--raw-on-surface: #dfe3e1;
+	--raw-on-surface-variant: #bbcabf;
+	--raw-outline: #86948a;
+	--raw-outline-variant: #3c4a42;
+
+	--raw-primary: #4edea3;
+	--raw-on-primary: #003824;
+	--raw-primary-container: #10b981;
+	--raw-on-primary-container: #00422b;
+
+	--raw-secondary: #4fdbc8;
+	--raw-on-secondary: #003731;
+	--raw-secondary-container: #04b4a2;
+	--raw-on-secondary-container: #003f38;
+
+	--raw-tertiary: #95d3ba;
+	--raw-on-tertiary: #003829;
+	--raw-tertiary-container: #71af97;
+	--raw-on-tertiary-container: #004231;
+
+	--raw-error: #ffb4ab;
+	--raw-on-error: #690005;
+	--raw-error-container: #93000a;
+	--raw-on-error-container: #ffdad6;
+
+	--raw-background: #101413;
+	--raw-on-background: #dfe3e1;
+
+	--raw-font-display: "Geist", sans-serif;
+	--raw-font-body: "Geist", sans-serif;
+	--raw-font-mono: "JetBrains Mono", monospace;
+
+	--raw-radius-sm: 0.125rem;
+	--raw-radius-md: 0.375rem;
+	--raw-radius-lg: 0.5rem;
+	--raw-radius-xl: 0.75rem;
+
+  --raw-text-hero-mobile: 1.5rem;
+	--raw-text-hero-desktop: 3rem; 
+
+	color-scheme: dark;
+}
+
+/* =========================================================================
+   Solar Minimal — tema claro
+   ========================================================================= */
+[data-theme="solar"] {
+	--raw-surface: #f4fafd;
+	--raw-surface-dim: #d4dbdd;
+	--raw-surface-bright: #f4fafd;
+	--raw-surface-container-lowest: #ffffff;
+	--raw-surface-container-low: #eef5f7;
+	--raw-surface-container: #e8eff1;
+	--raw-surface-container-high: #e2e9ec;
+	--raw-surface-container-highest: #dde4e6;
+	--raw-on-surface: #161d1f;
+	--raw-on-surface-variant: #56423d;
+	--raw-outline: #8a726c;
+	--raw-outline-variant: #ddc0ba;
+
+	--raw-primary: #a03f29;
+	--raw-on-primary: #ffffff;
+	--raw-primary-container: #e17055;
+	--raw-on-primary-container: #570d00;
+
+	--raw-secondary: #7c5800;
+	--raw-on-secondary: #ffffff;
+	--raw-secondary-container: #ffcd70;
+	--raw-on-secondary-container: #785500;
+
+	--raw-tertiary: #006a60;
+	--raw-on-tertiary: #ffffff;
+	--raw-tertiary-container: #00a394;
+	--raw-on-tertiary-container: #00302b;
+
+	--raw-error: #ba1a1a;
+	--raw-on-error: #ffffff;
+	--raw-error-container: #ffdad6;
+	--raw-on-error-container: #93000a;
+
+	--raw-background: #f4fafd;
+	--raw-on-background: #161d1f;
+
+	--raw-font-display: "Manrope", sans-serif;
+	--raw-font-body: "Source Sans 3", sans-serif;
+	--raw-font-mono: "Source Sans 3", sans-serif;
+
+	--raw-radius-sm: 0.5rem;
+	--raw-radius-md: 0.75rem;
+	--raw-radius-lg: 1rem;
+	--raw-radius-xl: 1.5rem;
+
+  --raw-text-hero-mobile: 2.5rem;
+	--raw-text-hero-desktop: 4rem;
+
+	color-scheme: light;
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-on-background);
+	font-family: var(--font-body);
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+html {
+	scroll-behavior: smooth;
+}
