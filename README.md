@@ -1,75 +1,43 @@
-# React + TypeScript + Vite
+# Portfolio — Andrés Vanegas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing personal bilingüe (ES/EN) con dos temas visuales completos —**Emerald Night** (oscuro) y **Solar Minimal** (claro)— diseñados en Stitch y migrados a un stack real de producción.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19 + TypeScript + Vite**
+- **Tailwind CSS v4**, con los tokens de ambos temas como variables CSS intercambiables en runtime (`data-theme`)
+- **Framer Motion** para las animaciones (respeta `prefers-reduced-motion` vía `MotionConfig`)
+- **Typed.js** para el efecto de tipeo del Hero
+- **@icons-pack/react-simple-icons** + un ícono de LinkedIn hecho a mano (Simple Icons descontinuó el de LinkedIn por su política de marca)
+- **Vercel Edge Function** (`/api/github-projects`) como proxy cacheado hacia la API de GitHub
+- **Formspree** para el envío real del formulario de contacto
 
-## React Compiler
+## Secciones
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hero (con tipeo animado) · Proyectos (carrusel circular con capturas en vivo de cada demo) · Educación · Skills (agrupadas por categoría, con logos reales) · Hobbies (bento gallery) · Contacto (envío real por Formspree)
 
-## Expanding the ESLint configuration
+## Por qué hay un proxy para GitHub
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+La API de búsqueda de GitHub tiene un límite muy bajo para pedidos sin autenticar (10/min). `/api/github-projects` cachea la respuesta 10 minutos en el edge de Vercel (`s-maxage=600`), así el límite lo absorbe el proxy compartido en vez de gastarse por cada visitante.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Desarrollo
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+`npm run dev` (Vite solo) **no sirve** `/api/github-projects` — hace falta `vercel dev` para tener la función serverless corriendo localmente. No hace falta ninguna variable de entorno.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+vercel dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Comando | Qué hace |
+| --- | --- |
+| `npm run dev` | Vite solo (sin la función serverless) |
+| `vercel dev` | Vite + `/api/github-projects` localmente |
+| `npm run build` | Type-check + build de producción |
+| `npm run preview` | Sirve el build localmente |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Accesibilidad
 
-```
+Nav colapsable en mobile, foco visible y navegación por teclado (incluido el carrusel, con flechas ← →), labels reales en el formulario (visualmente ocultos), y todas las animaciones respetan la preferencia de "reducir movimiento" del sistema operativo.

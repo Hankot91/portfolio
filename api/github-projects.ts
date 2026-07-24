@@ -21,7 +21,7 @@ export default async function handler() {
 		status: 200,
 		headers: {
 			"Content-Type": "application/json",
-			"Cache-Control": "s-maxage=600, stale-while-revalidate=3600",
+			"Cache-Control": "s-maxage=600, sta00le-while-revalidate=3600",
 		},
 	});
 }

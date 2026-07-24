@@ -13,7 +13,7 @@ const NAV_KEYS = [
 ] as const;
 
 export function Header() {
-	const { t } = useLanguage();
+	const { t, lang } = useLanguage();
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	return (
@@ -42,7 +42,7 @@ export function Header() {
 					<SettingsPanel />
 
 					<a
-						href="/cv.pdf"
+						href={lang === "es" ? "/cv-es.pdf" : "/cv-en.pdf"}
 						download
 						className="hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-on-primary transition-transform hover:scale-105 active:scale-95 md:inline-block"
 					>
@@ -77,7 +77,7 @@ export function Header() {
 						</a>
 					))}
 					<a
-						href="/cv.pdf"
+						href={lang === "es" ? "/cv-es.pdf" : "/cv-en.pdf"}
 						download
 						className="mt-2 rounded-lg bg-primary px-4 py-3 text-center font-bold text-on-primary"
 					>
