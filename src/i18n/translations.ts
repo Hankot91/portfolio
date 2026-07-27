@@ -155,24 +155,26 @@ export const projectDescriptions: Record<Lang, Record<string, string>> = {
 	es: {
 		games_hub:
 			"Catálogo de videojuegos gratuitos con búsqueda, comparador, favoritos, noticias y un dashboard con estadísticas. Construido con React, TypeScript y TanStack Query, con funciones edge en Vercel como proxy hacia la API de juegos.",
-		org: "App React para gestionar equipos y colaboradores. Agrega miembros, asigna departamentos, personaliza colores en tiempo real y marca favoritos. El estado persiste con localStorage.",
-		creador_de_tareas:
-			"Gestor de tareas minimalista — crea, edita, completa y elimina tareas. Los datos persisten entre sesiones gracias a localStorage. Construido con Vanilla JS y módulos ES, sin frameworks.",
+		org: 
+			"App React para gestionar equipos y colaboradores. Agrega miembros, asigna departamentos, personaliza colores en tiempo real y marca favoritos. El estado persiste con localStorage.",
 		encriptador_de_texto:
 			"Encriptador de texto que transforma vocales en palabras clave predefinidas. Permite encriptar y desencriptar mensajes desde una interfaz limpia. Construido con Vanilla JS sin frameworks.",
 		weather_app:
 			"Clima en tiempo real con pronósticos por horas y días, alertas meteorológicas, globo 3D de ubicación y fondo animado que cambia según el clima real.",
+		taskflow:
+			"Agenda personal con tablero Kanban, calendario y estadísticas. Construida 100% en frontend — sin backend — con React, TypeScript y Tailwind CSS v4.",
 	},
 	en: {
 		games_hub:
 			"Free-to-play game catalog with search, a comparison tool, favorites, a news feed and a stats dashboard. Built with React, TypeScript and TanStack Query, using Vercel edge functions as a proxy to the games API.",
-		org: "React app to manage teams and collaborators. Add members, assign departments, customize colors in real time and track favorites. State persists with localStorage.",
-		creador_de_tareas:
-			"Minimal task manager — create, edit, complete and delete tasks. Data persists between sessions using localStorage. Built with Vanilla JS ES Modules, no frameworks.",
+		org:
+			"React app to manage teams and collaborators. Add members, assign departments, customize colors in real time and track favorites. State persists with localStorage.",
 		encriptador_de_texto:
 			"Text encryptor that transforms vowels into predefined keywords. Encrypt and decrypt messages through a clean, straightforward interface. Built with Vanilla JS, no frameworks.",
 		weather_app:
 			"Real-time weather with hourly and daily forecasts, weather alerts, a 3D location globe, and an animated background that changes based on actual weather conditions.",
+		taskflow:
+			"A personal task-management app with a Kanban board, calendar, and stats — built fully frontend-only with React, TypeScript, and Tailwind CSS v4.",
 	},
 };
 
