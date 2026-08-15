@@ -16,11 +16,11 @@ function Content() {
 				<Hero />
 				<Projects />
 				<Educacion />
-        <Skills />
-        <Hobbies />
-        <Contact />
-        <Footer />
+				<Skills />
+				<Hobbies />
+				<Contact />
 			</main>
+			<Footer />
 		</div>
 	);
 }

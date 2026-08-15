@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useCallback, useMemo, useState, type ReactNode } from "react";
 import { translations, type Lang } from "./translations";
 import { LanguageContext, type LanguageContextValue } from "./language-context";
 
@@ -10,6 +10,9 @@ function detectLang(): Lang {
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
 	const [lang, setLang] = useState<Lang>(detectLang);
+	useEffect(() => {
+		document.documentElement.lang = lang;
+	}, [lang]);
 
 	const toggleLang = useCallback(() => {
 		setLang((prev) => {
