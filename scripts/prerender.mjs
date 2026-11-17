@@ -94,6 +94,10 @@ async function run() {
 		console.log("Abriendo navegador headless...");
 		const browser = await launchBrowser();
 		const page = await browser.newPage();
+		// El HTML estático (y lo que ve Google sin JS) debe salir en español
+		await page.evaluateOnNewDocument(() => {
+			localStorage.setItem("portfolio:lang", "es");
+		});
 
 		await page.goto(URL, { waitUntil: "networkidle0", timeout: 30000 });
 		await new Promise((r) => setTimeout(r, 500));

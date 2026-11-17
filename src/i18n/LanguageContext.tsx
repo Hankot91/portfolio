@@ -5,7 +5,10 @@ import { LanguageContext, type LanguageContextValue } from "./language-context";
 function detectLang(): Lang {
 	const saved = localStorage.getItem("portfolio:lang");
 	if (saved === "es" || saved === "en") return saved;
-	return navigator.language.startsWith("es") ? "es" : "en";
+	// Crawlers y navegadores automatizados reportan en-US: se les sirve español
+	const isBot = navigator.webdriver || /bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent);
+	if (isBot) return "es";
+	return navigator.language.startsWith("en") ? "en" : "es";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

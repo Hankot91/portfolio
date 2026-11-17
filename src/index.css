@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -38,129 +37,98 @@
 	--color-background: var(--raw-background);
 	--color-on-background: var(--raw-on-background);
 
-	/* Tipografía: cambia de familia entera según el tema */
-	--font-display: var(--raw-font-display);
-	--font-body: var(--raw-font-body);
-	--font-mono: var(--raw-font-mono);
-  --text-hero-mobile: var(--raw-text-hero-mobile);
-	--text-hero-desktop: var(--raw-text-hero-desktop);
-
-	/* Radios: "Cyber-Organic" (chico, técnico) vs "Rounded" (grande, cálido) */
-	--radius-token-sm: var(--raw-radius-sm);
-	--radius-token-md: var(--raw-radius-md);
-	--radius-token-lg: var(--raw-radius-lg);
-	--radius-token-xl: var(--raw-radius-xl);
-
-	--container-max: 1280px;
+	/* Una sola identidad tipográfica para ambos temas */
+	--font-display: "Geist", sans-serif;
+	--font-body: "Geist", sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
+	--text-hero-mobile: 2.5rem;
+	--text-hero-desktop: 4.5rem;
 }
 
 /* =========================================================================
-   Emerald Night — tema oscuro, default
+   Bosque — tema oscuro, default
    ========================================================================= */
 :root,
-[data-theme="esmerald"] {
-	--raw-surface: #101413;
-	--raw-surface-dim: #101413;
-	--raw-surface-bright: #353a39;
-	--raw-surface-container-lowest: #0a0f0e;
-	--raw-surface-container-low: #181d1b;
-	--raw-surface-container: #1c211f;
-	--raw-surface-container-high: #262b2a;
-	--raw-surface-container-highest: #313634;
-	--raw-on-surface: #dfe3e1;
-	--raw-on-surface-variant: #bbcabf;
-	--raw-outline: #86948a;
-	--raw-outline-variant: #3c4a42;
+[data-theme="dark"] {
+	--raw-surface: #111412;
+	--raw-surface-dim: #111412;
+	--raw-surface-bright: #363b37;
+	--raw-surface-container-lowest: #0c0f0d;
+	--raw-surface-container-low: #171a18;
+	--raw-surface-container: #1b1f1c;
+	--raw-surface-container-high: #252a26;
+	--raw-surface-container-highest: #303631;
+	--raw-on-surface: #e2e5e0;
+	--raw-on-surface-variant: #b9c0b8;
+	--raw-outline: #848c83;
+	--raw-outline-variant: #3b433c;
 
-	--raw-primary: #4edea3;
-	--raw-on-primary: #003824;
-	--raw-primary-container: #10b981;
-	--raw-on-primary-container: #00422b;
+	--raw-primary: #8dbf9f;
+	--raw-on-primary: #0d2518;
+	--raw-primary-container: #4a8a68;
+	--raw-on-primary-container: #e3f3e8;
 
-	--raw-secondary: #4fdbc8;
-	--raw-on-secondary: #003731;
-	--raw-secondary-container: #04b4a2;
-	--raw-on-secondary-container: #003f38;
+	--raw-secondary: #9dbdb3;
+	--raw-on-secondary: #0f2620;
+	--raw-secondary-container: #4f7a6e;
+	--raw-on-secondary-container: #dcefe8;
 
-	--raw-tertiary: #95d3ba;
-	--raw-on-tertiary: #003829;
-	--raw-tertiary-container: #71af97;
-	--raw-on-tertiary-container: #004231;
+	--raw-tertiary: #b7c7a8;
+	--raw-on-tertiary: #1f2a14;
+	--raw-tertiary-container: #6f8660;
+	--raw-on-tertiary-container: #eef5e6;
 
 	--raw-error: #ffb4ab;
 	--raw-on-error: #690005;
 	--raw-error-container: #93000a;
 	--raw-on-error-container: #ffdad6;
 
-	--raw-background: #101413;
-	--raw-on-background: #dfe3e1;
+	--raw-background: #111412;
+	--raw-on-background: #e2e5e0;
 
-	--raw-font-display: "Geist", sans-serif;
-	--raw-font-body: "Geist", sans-serif;
-	--raw-font-mono: "JetBrains Mono", monospace;
-
-	--raw-radius-sm: 0.125rem;
-	--raw-radius-md: 0.375rem;
-	--raw-radius-lg: 0.5rem;
-	--raw-radius-xl: 0.75rem;
-
-  --raw-text-hero-mobile: 1.5rem;
-	--raw-text-hero-desktop: 3rem; 
 
 	color-scheme: dark;
 }
 
 /* =========================================================================
-   Solar Minimal — tema claro
+   Bosque de día — tema claro (misma identidad, otra luz)
    ========================================================================= */
-[data-theme="solar"] {
-	--raw-surface: #f4fafd;
-	--raw-surface-dim: #d4dbdd;
-	--raw-surface-bright: #f4fafd;
+[data-theme="light"] {
+	--raw-surface: #f6f7f4;
+	--raw-surface-dim: #d8dbd5;
+	--raw-surface-bright: #f6f7f4;
 	--raw-surface-container-lowest: #ffffff;
-	--raw-surface-container-low: #eef5f7;
-	--raw-surface-container: #e8eff1;
-	--raw-surface-container-high: #e2e9ec;
-	--raw-surface-container-highest: #dde4e6;
-	--raw-on-surface: #161d1f;
-	--raw-on-surface-variant: #56423d;
-	--raw-outline: #8a726c;
-	--raw-outline-variant: #ddc0ba;
+	--raw-surface-container-low: #f0f2ee;
+	--raw-surface-container: #eaede8;
+	--raw-surface-container-high: #e4e8e2;
+	--raw-surface-container-highest: #dee2dc;
+	--raw-on-surface: #171a17;
+	--raw-on-surface-variant: #444b44;
+	--raw-outline: #737b72;
+	--raw-outline-variant: #c4cac2;
 
-	--raw-primary: #a03f29;
+	--raw-primary: #2e6b4c;
 	--raw-on-primary: #ffffff;
-	--raw-primary-container: #e17055;
-	--raw-on-primary-container: #570d00;
+	--raw-primary-container: #a9d4b9;
+	--raw-on-primary-container: #0b2a1a;
 
-	--raw-secondary: #7c5800;
+	--raw-secondary: #3f6a5d;
 	--raw-on-secondary: #ffffff;
-	--raw-secondary-container: #ffcd70;
-	--raw-on-secondary-container: #785500;
+	--raw-secondary-container: #bcdcd1;
+	--raw-on-secondary-container: #0c2a22;
 
-	--raw-tertiary: #006a60;
+	--raw-tertiary: #5a6b45;
 	--raw-on-tertiary: #ffffff;
-	--raw-tertiary-container: #00a394;
-	--raw-on-tertiary-container: #00302b;
+	--raw-tertiary-container: #d3e3c0;
+	--raw-on-tertiary-container: #1c2a0e;
 
 	--raw-error: #ba1a1a;
 	--raw-on-error: #ffffff;
 	--raw-error-container: #ffdad6;
 	--raw-on-error-container: #93000a;
 
-	--raw-background: #f4fafd;
-	--raw-on-background: #161d1f;
-
-	--raw-font-display: "Manrope", sans-serif;
-	--raw-font-body: "Source Sans 3", sans-serif;
-	--raw-font-mono: "Source Sans 3", sans-serif;
-
-	--raw-radius-sm: 0.5rem;
-	--raw-radius-md: 0.75rem;
-	--raw-radius-lg: 1rem;
-	--raw-radius-xl: 1.5rem;
-
-  --raw-text-hero-mobile: 2.5rem;
-	--raw-text-hero-desktop: 4rem;
+	--raw-background: #f6f7f4;
+	--raw-on-background: #171a17;
 
 	color-scheme: light;
 }
@@ -169,11 +137,57 @@ body {
 	background-color: var(--color-background);
 	color: var(--color-on-background);
 	font-family: var(--font-body);
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 5rem; /* los anclajes no quedan bajo el header fijo */
+}
+
+::selection {
+	background: color-mix(in oklab, var(--color-primary) 30%, transparent);
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 3px;
+	border-radius: 0.375rem;
+}
+
+/* Cambio de tema: fundido de la captura completa, resuelto en la GPU */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.25s;
+	animation-timing-function: ease-out;
+}
+
+/* Material translúcido: capa funcional que flota sobre el contenido */
+.glass {
+	background: color-mix(in oklab, var(--color-surface) 72%, transparent);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Accesibilidad: tres señales independientes */
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+}
+@media (prefers-reduced-transparency: reduce) {
+	.glass {
+		background: var(--color-surface);
+		-webkit-backdrop-filter: none;
+		backdrop-filter: none;
+	}
+}
+
+/* FAQ: el contenido entra suave al abrir */
+@keyframes faq-in {
+	from { opacity: 0; transform: translateY(-4px); }
+	to { opacity: 1; transform: none; }
+}
+details[open] > .faq-body { animation: faq-in 0.25s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+	details[open] > .faq-body { animation: none; }
 }

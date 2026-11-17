@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+# Funciones serverless: no son contenido
+Disallow: /api/
+# Carpeta de paginación (no existe hoy; queda cubierta si se crea)
+Disallow: /page/
 
 Sitemap: https://portfolio-acvp.vercel.app/sitemap.xml

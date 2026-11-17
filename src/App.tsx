@@ -7,20 +7,37 @@ import { Skills } from "./components/Skills";
 import { Hobbies } from "./components/Hobbies";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Resumen } from "./components/Resumen";
+import { FAQ } from "./components/FAQ";
+import { MobileCTA } from "./components/MobileCTA";
+import { StructuredData } from "./components/StructuredData";
+import { useSeo } from "./hooks/useSeo";
+
+const BAND = "border-y border-outline-variant/15 bg-surface-container-low/60";
 
 function Content() {
+	useSeo();
+
 	return (
 		<div className="min-h-screen bg-background text-on-background">
+			<StructuredData />
 			<Header />
 			<main>
 				<Hero />
+				<Resumen />
 				<Projects />
-				<Educacion />
+				<div className={BAND}>
+					<Educacion />
+				</div>
 				<Skills />
-				<Hobbies />
+				<div className={BAND}>
+					<Hobbies />
+				</div>
+				<FAQ />
 				<Contact />
 			</main>
 			<Footer />
+			<MobileCTA />
 		</div>
 	);
 }

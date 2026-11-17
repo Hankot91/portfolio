@@ -1,0 +1,23 @@
+# Andrés Vanegas — Portafolio
+
+> Estudiante de Ingeniería de Sistemas en la Universidad de los Llanos (Villavicencio, Meta, Colombia). Desarrolla software de principio a fin: interfaces con React y TypeScript, servicios con Java, PHP y Node.js, y bases de datos relacionales y no relacionales. Busca prácticas o su primer empleo en desarrollo de software.
+
+## Portafolio
+- [Inicio y resumen](https://portfolio-acvp.vercel.app/): quién es, qué construye y qué busca.
+- [Proyectos](https://portfolio-acvp.vercel.app/#proyectos): aplicaciones con código en GitHub y demo en línea.
+- [Educación](https://portfolio-acvp.vercel.app/#educacion): Ingeniería de Sistemas y formación complementaria.
+- [Skills](https://portfolio-acvp.vercel.app/#skills): lenguajes, backend, bases de datos, frontend y herramientas.
+- [Preguntas frecuentes](https://portfolio-acvp.vercel.app/#faq): respuestas breves sobre perfil, stack y disponibilidad.
+- [Contacto](https://portfolio-acvp.vercel.app/#contacto): formulario y correo.
+
+## Documentos
+- [Hoja de vida (español)](https://portfolio-acvp.vercel.app/cv-es.pdf)
+- [Resume (English)](https://portfolio-acvp.vercel.app/cv-en.pdf)
+
+## Perfiles
+- [GitHub](https://github.com/Hankot91): código fuente de los proyectos.
+- [LinkedIn](https://www.linkedin.com/in/camilov99/)
+
+## Notas
+- Sitio bilingüe (español por defecto, inglés con el selector de idioma).
+- El contenido de este sitio puede citarse indicando la fuente.
